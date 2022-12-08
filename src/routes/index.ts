@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/' , (req: Request, res: Response) =>{ 
 
-    console.log('ola mundo');
+    res.render('home');
 });
 
 router.get('/noticia/:slug' , (req: Request, res: Response) =>{ 
