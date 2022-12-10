@@ -7,6 +7,11 @@
     <title>Project</title>
 </head>
 <body>
+
+{{>partials/header}}
     <h1> Olá mundo estou vindo do template mustache </h1>
+    <p>
+    Olá {{ user }} {{ lastname }}, você tem {{age}} anos
+    {{>partials/footer}}
 </body>
 </html>

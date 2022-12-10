@@ -1,17 +1,17 @@
 import { Router , Request , Response } from "express";
+import { CalcularIdade, Homepage, Idade, Nome, Noticia } from "../controllers";
 
 const router = Router();
 
 
-router.get('/' , (req: Request, res: Response) =>{ 
+router.get('/' , Homepage );
 
-    res.render('home');
-});
+router.get('/noticia/:slug' , Noticia );
 
-router.get('/noticia/:slug' , (req: Request, res: Response) =>{ 
+router.get('/nome' , Nome);
 
-    let noticia: string = req.params.slug;
-    res.send(noticia);
-})
+router.get('/idade' , Idade);
+
+router.post('/idade/calcular' , CalcularIdade);
 
 export default router;
