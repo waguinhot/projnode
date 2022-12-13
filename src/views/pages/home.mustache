@@ -9,9 +9,16 @@
 <body>
 
 {{>partials/header}}
-    <h1> Olá mundo estou vindo do template mustache </h1>
-    <p>
-    Olá {{ user }} {{ lastname }}, você tem {{age}} anos
+    
+    
+<h2> Usuários </h2>
+  
+
+ <ul>
+{{#users}}
+     <li>  Nome: {{name}} - - - Idade: {{ age}} </li>
+{{/users}}
+    </ul>
     {{>partials/footer}}
 </body>
 </html>

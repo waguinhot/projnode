@@ -1,5 +1,5 @@
 import { Router , Request , Response } from "express";
-import { CalcularIdade, Homepage, Idade, Nome, Noticia } from "../controllers";
+import { CalcularIdade, Homepage, Idade, Nome, Noticia } from "../controllers/homeController";
 
 const router = Router();
 

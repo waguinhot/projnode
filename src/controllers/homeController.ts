@@ -1,13 +1,16 @@
 import {   Request , Response } from "express";
 
+import { Product } from '../models/Product';
+import { User } from "../models/User";
 
-export const Homepage = (req: Request, res: Response) =>{ 
+export const Homepage = async (req: Request, res: Response) =>{ 
 
-    res.render('pages/home' , {
-        user: 'Fulano',
-        lastname: 'Ciclano da Silva',
-        age: 25
-    });
+    let users = await User.findAll();
+
+
+
+    res.render('pages/home' , {users});
+
 
 }
 
