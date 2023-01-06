@@ -13,6 +13,11 @@
     
 <h2> Usuários </h2>
   
+  <form action="/user/new" method="POST">
+        <input type="text" name="name" required placeholder="nome" /> <br>    
+        <input type="number" name="age" required placeholder="idade" /> <br>
+        <input type="submit" value="enviar" />  
+  </form>
 
  <ul>
 {{#users}}

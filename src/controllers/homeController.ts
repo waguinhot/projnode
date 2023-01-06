@@ -7,10 +7,7 @@ export const Homepage = async (req: Request, res: Response) =>{
 
     let users = await User.findAll();
 
-
-
     res.render('pages/home' , {users});
-
 
 }
 
